@@ -23,9 +23,9 @@
 #if defined(_USING_DYNAMIC_HID)
 
 #define JOYSTICK_REPORT_ID_INDEX 7
-#define JOYSTICK_AXIS_MINIMUM -32767
+#define JOYSTICK_AXIS_MINIMUM 0
 #define JOYSTICK_AXIS_MAXIMUM 32767
-#define JOYSTICK_SIMULATOR_MINIMUM -32767
+#define JOYSTICK_SIMULATOR_MINIMUM 0
 #define JOYSTICK_SIMULATOR_MAXIMUM 32767
 
 #define JOYSTICK_INCLUDE_X_AXIS  B00000001
@@ -293,10 +293,9 @@ Joystick_::Joystick_(
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x09;
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x01;
 
-		// LOGICAL_MINIMUM (-32767)
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x16;
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x01;
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x80;
+		// LOGICAL_MINUMUM (0)
+		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x15;
+		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x00;
 
 		// LOGICAL_MAXIMUM (+32767)
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x26;
@@ -366,10 +365,9 @@ Joystick_::Joystick_(
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x05;
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x02;
 		
-		// LOGICAL_MINIMUM (-32767)
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x16;
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x01;
-		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x80;
+		// LOGICAL_MINUMUM (0)
+		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x15;
+		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x00;
 
 		// LOGICAL_MAXIMUM (+32767)
 		tempHidReportDescriptor[hidReportDescriptorSize++] = 0x26;

@@ -1,3 +1,6 @@
+#### Fix for Unity
+This fork implements a hardcoded fix limiting joystick's axis output from 0 to 32767, which is a workaround to get Unity (and perhaps other programs) to play nice with this library. See [this issue](https://github.com/MHeironimus/ArduinoJoystickLibrary/issues/34) and [this issue](https://github.com/MHeironimus/ArduinoJoystickLibrary/issues/104).
+
 # Arduino Joystick Library
 #### Version 2.0.5
 This library can be used with Arduino IDE 1.6.6 (or above) to add one or more joysticks (or gamepads) to the list of HID devices an [Arduino Leonardo](https://www.arduino.cc/en/Main/ArduinoBoardLeonardo) or [Arduino Micro](https://www.arduino.cc/en/Main/ArduinoBoardMicro) (or any Arduino clone that is based on the ATmega32u4) can support. This library will also work with the [Arduino Due](https://www.arduino.cc/en/Main/ArduinoBoardDue), thanks to [@Palakis](https://github.com/Palakis). A complete list of supported boards can be found in the [Wiki](https://github.com/MHeironimus/ArduinoJoystickLibrary/wiki/Supported-Boards). This will not work with Arduino IDE 1.6.5 (or below) or with non-32u4 based Arduino devices (e.g. Arduino UNO, Arduino MEGA, etc.).
